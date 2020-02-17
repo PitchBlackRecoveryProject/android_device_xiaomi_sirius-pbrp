@@ -116,7 +116,7 @@ TW_NO_SCREEN_TIMEOUT := false
 PB_DISABLE_DEFAULT_DM_VERITY := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_DEVICE_VERSION := 1
-
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone9/temp
 
 TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
 TW_SKIP_COMPATIBILITY_CHECK := true
@@ -127,6 +127,7 @@ TW_INCLUDE_NTFS_3G := true
 # Excludes
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_TWRPAPP := true
+
 
 # Locale
 TW_EXTRA_LANGUAGES := true
@@ -154,3 +155,6 @@ TW_INCLUDE_FUSE_NTFS := true
 # Debug
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
+
+
+
