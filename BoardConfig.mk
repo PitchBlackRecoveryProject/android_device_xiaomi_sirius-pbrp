@@ -116,7 +116,7 @@ TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 ########
 # TWRP #
 ########
-TW_USE_TOOLBOX := true
+TW_FORCE_USE_BUSYBOX := true
 TW_NO_BATT_PERCENT := false
 # Display
 TW_THEME := portrait_hdpi
