@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 PRODUCT_DEVICE := RMX1901
 PRODUCT_NAME := omni_RMX1901
 PRODUCT_BRAND := Realme
-PRODUCT_MODEL := RMX1901
+PRODUCT_MODEL := Realme X
 PRODUCT_MANUFACTURER := Realme
 
 PRODUCT_PROPERTY_OVERRIDES += \
