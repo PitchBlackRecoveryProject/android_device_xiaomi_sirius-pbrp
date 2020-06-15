@@ -130,6 +130,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_NO_SCREEN_BLANK := true
 TW_NO_SCREEN_TIMEOUT := true
+TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
 
 # Includes
 TW_INCLUDE_NTFS_3G := true
