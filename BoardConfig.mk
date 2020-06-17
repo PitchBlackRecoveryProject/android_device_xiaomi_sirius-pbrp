@@ -74,9 +74,14 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_OTA_ASSERT_DEVICE := RMX1901
 
 # Android Verified Boot
-PLATFORM_SECURITY_PATCH := 2099-12-31
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+
+TW_HAS_EDL_MODE := true
+
+# Hack: prevent anti rollback
+PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
 
 # system.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
@@ -112,8 +117,9 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 # QCOM Fix
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 
-# Recovery device modules
-TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
+#Init
+TARGET_INIT_VENDOR_LIB := libinit_realmex
+TARGET_RECOVERY_DEVICE_MODULES := libinit_realmex
 
 ########
 # TWRP #
@@ -130,7 +136,9 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_NO_SCREEN_BLANK := true
 TW_NO_SCREEN_TIMEOUT := true
+
 TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
+TW_SKIP_COMPATIBILITY_CHECK := true
 
 # Includes
 TW_INCLUDE_NTFS_3G := true
