@@ -11,10 +11,7 @@ jobs:
       VENDOR: 'realme'
       CODENAME: 'RMX1901'
       BUILD_LUNCH: 'omni_RMX1901-eng'
-      TEST_BUILD: 'true' # set 'true' for testing, otherwise do not use at all (for official)
-      # PB_OFFICIAL: 'true' # Set true only for Stable Official builds
-      # EXTRA_CMD: '' # some required commands like `ls` after `repo sync`, write in single line
-      # PB_ENGLISH: 'true' # If you want only English Language
+      PB_OFFICIAL: 'true'
       CHANGELOG: " - Initial build"
     working_directory: /home/builder/pitchblack
     steps:
