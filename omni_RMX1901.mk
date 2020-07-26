@@ -11,9 +11,9 @@ $(call inherit-product, vendor/pb/config/common.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1901
 PRODUCT_NAME := omni_RMX1901
-PRODUCT_BRAND := Realme
+PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme X
-PRODUCT_MANUFACTURER := Realme
+PRODUCT_MANUFACTURER := realme
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.treble.enabled=true \
