@@ -1,8 +1,9 @@
-sys.usb.controller=a600000.dwc3
+ro.product.brand=xiaomi
+ro.product.name=sirius
+ro.product.device=sirius
+ro.product.mod_device=sirius_global
+ro.build.product=sirius
+ro.treble.enabled=true
+sys.usb.controller=a800000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
-persist.sys.isUsbOtgEnabled=true
-vendor.gatekeeper.disable_spu=true
-ro.boot.avb_version=1.0
-ro.boot.vbmeta.avb_version=1.0
-ro.treble.enabled=true
