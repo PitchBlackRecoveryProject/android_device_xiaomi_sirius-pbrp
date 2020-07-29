@@ -4,13 +4,13 @@ jobs:
     docker:
       - image: fr3akyphantom/droid-builder:latest
     environment:
-      MANIFEST_BRANCH: 'android-9.0'
+      MANIFEST_BRANCH: 'pie'
       # PBRP_BRANCH: '' # optional, if not default 'android-9.0', define other bootable_recovery branch
       VERSION: '3.0.0' # as of now, the current PBRP version
       MAINTAINER: '@Sathamspot (PBRP Team)'
-      VENDOR: 'realme'
-      CODENAME: 'RMX1901'
-      BUILD_LUNCH: 'omni_RMX1901-eng'
+      VENDOR: 'xiaomi'
+      CODENAME: 'sirius'
+      BUILD_LUNCH: 'omni_sirius-eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: " - Initial build"
     working_directory: /home/builder/pitchblack
