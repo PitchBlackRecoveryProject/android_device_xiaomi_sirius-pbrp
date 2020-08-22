@@ -10,4 +10,4 @@ sys.usb.rmnet.func.name=rmnet_bam
 ro.build.software.version=Android9_10
 ro.boot.avb_version=1.0
 ro.boot.vbmeta.avb_version=1.0
-ro.treble.enabled=true
+
