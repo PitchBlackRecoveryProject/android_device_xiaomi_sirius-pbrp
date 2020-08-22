@@ -53,8 +53,8 @@ BOARD_PREBUILT_DTBOIMAGE := $(LOCAL_PATH)/prebuilt/dtbo.img
 
 
 # Android Verified Boot
-BOARD_AVB_ENABLE := false
-BOARD_BUILD_DISABLED_VBMETAIMAGE := true
+BOARD_AVB_ENABLE := true
+BOARD_BUILD_DISABLED_VBMETAIMAGE := false
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -144,6 +144,7 @@ TW_NO_SCREEN_TIMEOUT := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
+TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
