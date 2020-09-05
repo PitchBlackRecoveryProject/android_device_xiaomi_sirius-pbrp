@@ -98,10 +98,6 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 # QCOM Fix
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 
-#Init
-TARGET_INIT_VENDOR_LIB := libinit_sirius
-TARGET_RECOVERY_DEVICE_MODULES := libinit_sirius
-
 ########
 # TWRP #
 ########
