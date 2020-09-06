@@ -2,35 +2,34 @@ version: 2.1
 jobs:
   build:
     docker:
+      # new all-in-one docker image
       - image: fr3akyphantom/droid-builder:latest
     environment:
-      MANIFEST_BRANCH: 'pie'
-      # PBRP_BRANCH: '' # optional, if not default 'android-9.0', define other bootable_recovery branch
-      VERSION: '3.0.0' # as of now, the current PBRP version
-      MAINTAINER: '@Sathamspot (PBRP Team)'
+      MANIFEST_BRANCH: 'android-9.0'
+      VERSION: '3.0.0'
       VENDOR: 'xiaomi'
       CODENAME: 'sirius'
-      BUILD_LUNCH: 'omni_sirius-eng'
-      PB_OFFICIAL: 'true'
-      CHANGELOG: " - Initial build"
+      FLAVOR: 'eng'
+      MAINTAINER: '@QIH47'
+      TEST_BUILD: 'true'
+      CHANGELOG: |
+        - Initial test build
     working_directory: /home/builder/pitchblack
     steps:
       - run:
           name: AIO Build
           command: |
-            echo "Set GitAuth Infos"
-            git config --global user.email $GitHubMail
-            git config --global user.name $GitHubName
-            git config --global credential.helper store
-            git config --global color.ui true
+           
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
+          
+            
 workflows:
-  version: 2
+  version: 2.1
   build_and_test:
     jobs:
       - build:
+          context: org-global
           filters:
             branches:
               only: 'android-9.0'
-          context: org-global
