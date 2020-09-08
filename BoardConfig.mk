@@ -116,6 +116,7 @@ TW_NO_SCREEN_TIMEOUT := false
 PB_DISABLE_DEFAULT_DM_VERITY := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_DEVICE_VERSION := 1
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone9/temp
 
 
 TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
@@ -140,7 +141,6 @@ TW_NO_SCREEN_TIMEOUT := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
-TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw

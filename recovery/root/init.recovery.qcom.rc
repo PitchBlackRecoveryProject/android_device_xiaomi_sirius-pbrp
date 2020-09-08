@@ -1,3 +1,6 @@
+on early-init
+    mkdir /firmware 0771 system system
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -7,6 +10,8 @@ on fs
     export ANDROID_ROOT /system_root
     chown system system /dev/ion
     install_keyring
+    setprop crypto.ready 0
+    setprop crypto.ready 1
 
 on fs
     start hwservicemanager
@@ -61,10 +66,6 @@ service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service-qti
 on property:hwservicemanager.ready=true
     start sbinqseecomd
 
-on property:sys.listeners.registered=true
-    start keymaster-3-0
-    start gatekeeper-1-0
-
 on property:ro.crypto.state=unsupported
     stop sbinqseecomd
     stop keymaster-3-0
@@ -85,3 +86,20 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+    
+on property:crypto.ready=0
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+    stop hwservicemanager
+    stop keystore
+    stop servicemanager
+
+on property:crypto.ready=1
+    start sbinqseecomd
+    start hwservicemanager
+    start keymaster-3-0
+    start gatekeeper-1-0
+    start servicemanager
+
+

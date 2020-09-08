@@ -823,6 +823,6 @@
         </interface>
     </hal>
     <sepolicy>
-        <version>27.0</version>
+        <version>28.0</version>
     </sepolicy>
 </manifest>
