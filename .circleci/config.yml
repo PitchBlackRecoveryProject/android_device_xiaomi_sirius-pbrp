@@ -11,9 +11,14 @@ jobs:
       CODENAME: 'sirius'
       FLAVOR: 'eng'
       MAINTAINER: '@QIH47'
-      TEST_BUILD: 'true'
+      #TEST_BUILD: 'true'
+      PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Initial test build
+        - initial official release for sirius 
+        - Fix terminal issue
+        - No more stuck in PBRP logo
+        - Fix CPU temperature
+        - Update prebuilt kernel
     working_directory: /home/builder/pitchblack
     steps:
       - run:
