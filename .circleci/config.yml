@@ -11,9 +11,10 @@ jobs:
       CODENAME: 'sirius'
       FLAVOR: 'eng'
       MAINTAINER: '@QIH47'
-      TEST_BUILD: 'true'
+      #TEST_BUILD: 'true'
+      PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Initial test build
+        - Initial Official Release for Sirius
     working_directory: /home/builder/pitchblack
     steps:
       - run:
