@@ -14,7 +14,12 @@ jobs:
       #TEST_BUILD: 'true'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Initial Official Release for Sirius
+        - Update based 3.5.0 
+        - add Nano Editor
+        - Disable Patching DM-Verity By Default 
+        - Update Kernel 
+        - Update blobs from MIUI 12.0.2.0
+        - Many More.. 
     working_directory: /home/builder/pitchblack
     steps:
       - run:
