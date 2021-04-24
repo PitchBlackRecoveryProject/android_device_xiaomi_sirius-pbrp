@@ -15,6 +15,6 @@ Rear Camera  | 12MP+5MP, AI Dual Camera
 Front Camera | 20 MP
 
 ## Device Picture
-![Xiaomi MI 8 SE](https://www.teknosaurus.com/wp-content/uploads/2018/06/xiaomi-mi-8-SE-2.jpg "Xiaomi MI 8 SE")
+![Xiaomi MI 8 SE](https://asset.kompas.com/crops/ZuT7GPkxeXB7z5tQ3aHgx4ZwT7M=/0x0:911x607/750x500/data/photo/2018/06/01/4115455266.png "Xiaomi MI 8 SE")
 
 
