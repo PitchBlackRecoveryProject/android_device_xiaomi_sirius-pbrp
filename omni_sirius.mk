@@ -15,8 +15,8 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 # If needed to overide these props
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="google/redfin/redfin:11/RQ1D.210105.003/7005430:user/release-keys" \
-    PRIVATE_BUILD_DESC="sirius-user 10 QKQ1.190828.002 V12.0.2.0.QEBCNXM release-keys"
+    BUILD_FINGERPRINT="Xiaomi/sirius/sirius:8.1.0/OPM1.171019.019/V9.5.9.0.OEBCNFA:user/release-keys" \
+    PRIVATE_BUILD_DESC="sirius-user 8.1.0 OPM1.171019.019 V9.5.9.0.OEBCNFA release-keys"
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.treble.enabled=true \
